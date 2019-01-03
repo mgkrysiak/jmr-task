@@ -9,7 +9,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'Aleo', serif;
   font-family: 'Yesteryear', cursive;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   overflow: hidden;
 }
@@ -105,7 +105,15 @@ h1 {
   margin: 0 auto;
   width: 50%;
   display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flex;
   justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
 }
 
 .btn {
@@ -119,6 +127,7 @@ h1 {
 .btn.entry {
   width: 40%;
   height: 10%;
+  -moz-height: 100%;
   border: 1.5px solid white;
   background-color: transparent;
 }
@@ -140,7 +149,11 @@ h1 {
   bottom: 50%;
   left: 40%;
   margin-left: -80px;
-  /* visibility: hidden; */
+  visibility: hidden;
+}
+
+.popup.show {
+  visibility: visible;
 }
 
 .popcontent {
@@ -198,6 +211,7 @@ h1 {
 .footer {
   background-color: rgba(0, 0, 0, 0.5);
   height: 5%;
+  line-height: 100%;
   position: absolute;
   right: 0;
   bottom: 0;
@@ -216,11 +230,10 @@ h1 {
   list-style: none;
   height: 100%;
   font-family: 'Aleo', serif;
-  text-transform: uppercase;
 }
 
 #bottom li {
-  margin: 10 auto;
+  margin: 12 auto;
 }
 
 /* MEDIA QUERIES */
@@ -375,35 +388,32 @@ h1 {
 }
 
 @media (min-width: 1025px) and (max-width: 1920px) {
-
   body {
-    font-size: 24px;
+    font-size: 20px;
   }
 
-h1 {
-  font-size: 140px;
-}
+  h1 {
+    font-size: 140px;
+  }
 
-.btn {
-  font-size: 22px;
-}
+  .btn {
+    font-size: 18px;
+  }
 
-.popup {
-width: 25%;
-height: 70%;
-z-index: 1;
-bottom: 50%;
-left: 40%;
-margin-left: -80px;
-}
+  .popup {
+    width: 25%;
+    height: 70%;
+    z-index: 1;
+    bottom: 50%;
+    left: 40%;
+    margin-left: -80px;
+  }
 
-#loginform input {
-  font-size: 22px;
-}
+  #loginform input {
+    font-size: 22px;
+  }
 
-.footer {
-  font-size: 20px;
-  padding-top: 8;
-}
-
+  .footer {
+    font-size: 16px;
+  }
 }
